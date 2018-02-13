@@ -12,13 +12,13 @@ import android.view.Menu
 import android.view.MenuItem
 import com.tecc0.kotlinchan.R
 import com.tecc0.kotlinchan.databinding.ActivityMainBinding
-import com.tecc0.kotlinchan.fragment.MainFragment
+import com.tecc0.kotlinchan.fragment.SomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private val containerId: Int = R.id.fragment_container
-    private val firstFragment: Fragment = MainFragment.newInstance()
+    private val firstFragment: Fragment = SomeFragment.newInstance()
 
     private val binding: ActivityMainBinding by lazy {
         DataBindingUtil

@@ -5,19 +5,19 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.tecc0.kotlinchan.databinding.FragmentMainBinding
+import com.tecc0.kotlinchan.databinding.FragmentSomeBinding
 import com.tecc0.kotlinchan.model.User
 
 /**
  * Created by makoto_nishimoto on 2018/02/13.
  */
 
-class MainFragment : Fragment() {
+class SomeFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainBinding
+    private lateinit var binding: FragmentSomeBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentMainBinding.inflate(inflater, container!!, false)
+        binding = FragmentSomeBinding.inflate(inflater, container!!, false)
 
         val user = User("Squall", "Leonhart")
         binding.user = user
@@ -26,7 +26,7 @@ class MainFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): MainFragment = MainFragment()
+        fun newInstance(): SomeFragment = SomeFragment()
     }
 
 }
