@@ -1,34 +1,22 @@
 package com.tecc0.kotlinchan
 
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.tecc0.kotlinchan.model.User
+import com.tecc0.kotlinchan.fragment.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.app_bar_main.*
-import com.tecc0.kotlinchan.ActivityMainBinding;
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
-
-    private val binding: ActivityMainBinding by lazy {
-        DataBindingUtil
-                .setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-//        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
-        val user = User("Test", "User")
-        binding.user = user
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -41,6 +29,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        initFragment()
     }
 
     override fun onBackPressed() {
@@ -88,5 +78,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    fun initFragment() {
+        val ft = getSupportFragmentManager().beginTransaction()
+        ft.replace(R.id.activity_fragment_container, MainFragment.newInstance(), MainFragment.newInstance()::class.java.getSimpleName())
+        ft.commit()
     }
 }
