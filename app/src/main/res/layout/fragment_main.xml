@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="hoge"
@@ -24,25 +24,25 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/first_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="28dp"
             android:text="@{user.firstName}"
-            app:layout_constraintEnd_toEndOf="@+id/textView2"
-            app:layout_constraintStart_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintEnd_toEndOf="@+id/textview"
+            app:layout_constraintStart_toStartOf="@+id/textview"
+            app:layout_constraintTop_toBottomOf="@+id/textview" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/last_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@{user.lastName}"
-            app:layout_constraintEnd_toEndOf="@+id/button"
-            app:layout_constraintStart_toStartOf="@+id/button"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintEnd_toEndOf="@+id/first_button"
+            app:layout_constraintStart_toStartOf="@+id/first_button"
+            app:layout_constraintTop_toBottomOf="@+id/first_button" />
 
     </android.support.constraint.ConstraintLayout>
 

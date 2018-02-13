@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentMainBinding.inflate(inflater, container!!, false)
 
-        val user = User("Test", "User")
+        val user = User("Squall", "Leonhart")
         binding.user = user
 
         return binding.root
