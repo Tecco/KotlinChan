@@ -1,4 +1,4 @@
-package com.tecc0.kotlinchan
+package com.tecc0.kotlinchan.activity
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.tecc0.kotlinchan.R
 import com.tecc0.kotlinchan.fragment.MainFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
