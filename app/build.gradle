@@ -38,4 +38,25 @@ dependencies {
 
     // data binding
     kapt 'com.android.databinding:compiler:3.0.1'
+
+    // Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    // Okhttp3
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.1'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+
+    // RxAndroid
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    // Picasso
+    implementation 'com.squareup.picasso:picasso:2.5.2'
 }
