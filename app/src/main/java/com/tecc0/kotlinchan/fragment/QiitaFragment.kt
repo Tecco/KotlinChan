@@ -17,7 +17,7 @@ import io.reactivex.schedulers.Schedulers
  * Created by makoto_nishimoto on 2018/02/13.
  */
 
-class SomeFragment : Fragment() {
+class QiitaFragment : Fragment() {
 
     private lateinit var binding: FragmentSomeBinding
 
@@ -46,7 +46,7 @@ class SomeFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(): SomeFragment = SomeFragment()
+        fun newInstance(): QiitaFragment = QiitaFragment()
     }
 
 }
