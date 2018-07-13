@@ -24,9 +24,10 @@ class RetrofitManager {
                 .registerTypeAdapter(Date::class.java, DateTypeAdapter())
                 .create()
 
-        val interceptor = HttpLoggingInterceptor()
-        interceptor.level = HttpLoggingInterceptor.Level.BODY
-        val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(interceptor).build()
+        val interceptor = HttpLoggingInterceptor().apply {
+            this.level = HttpLoggingInterceptor.Level.BODY
+        }
+        val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 
         return Retrofit.Builder()
                 .baseUrl(apiService.url)
