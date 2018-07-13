@@ -48,9 +48,8 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
 
-    // TODO: RxKotlin
-    // RxJava
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+    // RxKotlin
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
 
     // RxAndroid
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
