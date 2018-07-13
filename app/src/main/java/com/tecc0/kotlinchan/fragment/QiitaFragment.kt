@@ -40,13 +40,10 @@ class QiitaFragment : Fragment() {
                 .unsubscribeOn(Schedulers.io())
                 .subscribe({ schema ->
                     binding.textview.text = schema?.description
-                }, { e: Throwable? ->
-                    e?.printStackTrace()
-                })
+                }, { e -> e?.printStackTrace() })
     }
 
     companion object {
-        fun newInstance(): QiitaFragment = QiitaFragment()
+        fun newInstance() = QiitaFragment()
     }
-
 }
